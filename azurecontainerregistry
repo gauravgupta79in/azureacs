@@ -26,3 +26,6 @@ kubectl create secret docker-registry gauravsecretkey1 --docker-server=gauravcon
 # get secrets from kubernetes
 kubectl get secrets
 
+# create a yaml file and put secret
+kubectl create -f <yamlfile>
+
