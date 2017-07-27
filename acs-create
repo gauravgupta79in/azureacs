@@ -16,6 +16,9 @@ kubectl expose deployment gauravapp --type=LoadBalancer --port=8010 --target-por
 # see the service details
 kubectl describe service gauravapp
 
+# scale out
+kubectl scale --current-replicas=2 --replicas=3 deployment/gauravapp
+
 
 
 
