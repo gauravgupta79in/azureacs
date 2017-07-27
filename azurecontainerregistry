@@ -2,7 +2,18 @@
 az ad sp create-for-rbac --scopes /subscriptions/<subscription-id>/resourcegroups/gauravACSResourceGroup/providers/Microsoft.ContainerRegistry/registries/gauravcontainerregistry --role Owner --password <password>
 
 # after executing above command it will show appid and password
-#so those spring boot apps who has appid and password can only access this container registry
 
 # list the credentials for registry
 az acr credential show -n gauravcontainerregistry
+
+# the above command will show 2 passwords use first password in below command to logininto registry from cmd
+
+# now login into gauravcontainerregistry using below command
+docker login -u gauravcontainerregistry -p "<password1>" gauravcontainerregistry.azurecr.io
+
+# tag your current image with registry name as mentioned below
+docker tag swagger:1.4 gauravcontainerregistry.azurecr.io/swagger
+
+# now push your registry tagged image using below command
+docker push gauravcontainerregistry.azurecr.io/swagger
+
