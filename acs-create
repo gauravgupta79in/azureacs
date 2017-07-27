@@ -29,6 +29,9 @@ kubectl get pods
 #horizontal scaling
 kubectl autoscale deployment gauravapp --min=2 --max=10 --cpu-percent=70
 
+# to show horizontal auto scaling rule
+kubectl get hpa
+
 
 
 
