@@ -17,3 +17,6 @@ docker tag swagger:1.4 gauravcontainerregistry.azurecr.io/swagger
 # now push your registry tagged image using below command
 docker push gauravcontainerregistry.azurecr.io/swagger
 
+# List images from container registry
+az acr repository list --name gauravcontainerregistry --username gauravcontainerregistry --password "/=oh++=E++0A=WQ==oGA/0Fgx+RShnb+" --output table
+
