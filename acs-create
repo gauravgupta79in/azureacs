@@ -11,7 +11,7 @@ az acs kubernetes browse --resource-group=gauravACSResourceGroup --name=gaurav-a
 
 #go to kubernetes dashboard and deploy
 # after that expose your service using below command
-kubectl expose deployment gauravapp --type=LoadBalancer --port=8010 --target-port=8090 service "gauravapp" exposed
+kubectl expose deployment gauravapp --type=LoadBalancer --port=8010 --target-port=8090
 
 # see the service details
 kubectl describe service gauravapp
@@ -21,6 +21,9 @@ kubectl scale --current-replicas=2 --replicas=3 deployment/gauravapp
 
 # get all pods
 kubectl get pods
+
+#horizontal scaling
+kubectl autoscale deployment gauravapp --min=2 --max=10 --cpu-percent=70
 
 
 
