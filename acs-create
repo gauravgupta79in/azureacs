@@ -10,6 +10,10 @@ kubectl
 az acs kubernetes browse --resource-group=gauravACSResourceGroup --name=gaurav-acs
 
 #go to kubernetes dashboard and deploy
+OR
+# run command 
+kubectl run myapp --image gauravgupta79in/swagger --requests=cpu=500m,memory=500M --expose --port=80
+
 # after that expose your service using below command
 kubectl expose deployment gauravapp --type=LoadBalancer --port=8010 --target-port=8090
 
@@ -24,6 +28,8 @@ kubectl get pods
 
 #horizontal scaling
 kubectl autoscale deployment gauravapp --min=2 --max=10 --cpu-percent=70
+
+
 
 
 
