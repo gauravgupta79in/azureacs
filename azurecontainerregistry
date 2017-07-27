@@ -1,1 +1,3 @@
-# azure containr regisrty
+# azure containr regisrty - create service principal
+# in spring boot app we have to 
+az ad sp create-for-rbac --scopes /subscriptions/<subscription-id>/resourcegroups/gauravACSResourceGroup/providers/Microsoft.ContainerRegistry/registries/gauravcontainerregistry --role Owner --password <password>
