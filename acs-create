@@ -6,4 +6,10 @@ az acs kubernetes get-credentials --resource-group=gauravACSResourceGroup --name
 # kubernetes cli
 kubectl
 
+az acs kubernetes browse --resource-group=gauravACSResourceGroup --name=gaurav-acs
+
+kubectl expose deployment mytestapp --type=LoadBalancer --port=8010 --target-port=8089 service "mytestapp" exposed
+
+
+
 
