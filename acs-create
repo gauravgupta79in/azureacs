@@ -1,0 +1,2 @@
+az group create --name=gauravACSResourceGroup --location="SouteastAsia"
+az acs create --name=gaurav-acs --resource-group=gauravACSResourceGroup --dns-prefix=gaurav-kubernets --orchestrator-type=Kubernetes --generate-ssh-keys
