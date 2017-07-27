@@ -1,4 +1,9 @@
 az group create --name=gauravACSResourceGroup --location="SouteastAsia"
 az acs create --name=gaurav-acs --resource-group=gauravACSResourceGroup --dns-prefix=gaurav-kubernets --orchestrator-type=Kubernetes --generate-ssh-keys
 
-az acs kubernetes get-credentials --resource-group=gauravACSResourceGroup --name=gaurav-acskubectl
+az acs kubernetes get-credentials --resource-group=gauravACSResourceGroup --name=gaurav-acs
+
+# kubernetes cli
+kubectl
+
+
