@@ -4,11 +4,12 @@ az acs create --name=gaurav-acs --resource-group=gauravACSResourceGroup --dns-pr
 az acs kubernetes get-credentials --resource-group=gauravACSResourceGroup --name=gaurav-acs
 
 # kubernetes cli
+az kubernetes install-cli
 kubectl
 
 az acs kubernetes browse --resource-group=gauravACSResourceGroup --name=gaurav-acs
 
-kubectl expose deployment mytestapp --type=LoadBalancer --port=8010 --target-port=8089 service "mytestapp" exposed
+kubectl expose deployment gauravapp --type=LoadBalancer --port=8010 --target-port=8090 service "gauravapp" exposed
 
 
 
