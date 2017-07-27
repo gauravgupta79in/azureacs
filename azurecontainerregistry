@@ -1,5 +1,8 @@
 # azure containr regisrty - Set a service principal for the container registry
 az ad sp create-for-rbac --scopes /subscriptions/<subscription-id>/resourcegroups/gauravACSResourceGroup/providers/Microsoft.ContainerRegistry/registries/gauravcontainerregistry --role Owner --password <password>
 
+# after executing above command it will show appid and password
+#so those spring boot apps who has appid and password can only access this container registry
+
 # list the credentials for registry
 az acr credential show -n gauravcontainerregistry
