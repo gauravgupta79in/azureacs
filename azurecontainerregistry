@@ -20,6 +20,9 @@ docker push gauravcontainerregistry.azurecr.io/swagger
 # List images from container registry
 az acr repository list --name gauravcontainerregistry --username gauravcontainerregistry --password "<password>" --output table
 
-# create secret to push and pull from ACR
+# create secret in kubernetes to push and pull from ACR
 kubectl create secret docker-registry gauravsecretkey1 --docker-server=gauravcontainerregistry --docker-username=gauravcontainerregistry --docker-password=<password> --docker-email=gauravgupta79in@yahoo.com 
+
+# get secrets from kubernetes
+kubectl get secrets
 
