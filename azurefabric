@@ -1,1 +1,8 @@
 # powershell command
+
+Connect-ServiceFabricCluster localhost:19000
+
+
+Copy-ServiceFabricApplicationPackage -ApplicationPackagePath 'D:\workdir\workspace\mySirstServiceFabric\mySirstServiceFabricApplication' `
+                        -ImageStoreConnectionString 'file:C:\SfDevCluster\Data\ImageStoreShare' `
+                        -ApplicationPackagePathInImageStore 'testServiceFabricImage'
