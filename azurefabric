@@ -6,3 +6,9 @@ Connect-ServiceFabricCluster localhost:19000
 Copy-ServiceFabricApplicationPackage -ApplicationPackagePath 'D:\workdir\workspace\mySirstServiceFabric\mySirstServiceFabricApplication' `
                         -ImageStoreConnectionString 'file:C:\SfDevCluster\Data\ImageStoreShare' `
                         -ApplicationPackagePathInImageStore 'testServiceFabricImage'
+
+Register-ServiceFabricApplicationType -ApplicationPathInImageStore 'testServiceFabricImage'
+       
+New-ServiceFabricApplication -ApplicationName 'fabric:/testServiceapp' `
+                             -ApplicationTypeName 'mySirstServiceFabricApplicationType' `
+                             -ApplicationTypeVersion 1.0.0 
